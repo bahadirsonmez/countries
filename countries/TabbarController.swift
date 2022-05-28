@@ -15,7 +15,7 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     func setupTabs() {
-        let firstViewController = CountryListViewController()
+        let firstViewController = CountryListViewController(viewModel: CountryListViewModel())
         let secondViewController = ViewController()
         
         let firstView: UIViewController = UINavigationController(rootViewController: firstViewController)

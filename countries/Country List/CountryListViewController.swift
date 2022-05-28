@@ -11,6 +11,17 @@ class CountryListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private let viewModel: CountryListViewModel
+        
+    init(viewModel: CountryListViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Countries"
@@ -38,13 +49,13 @@ extension CountryListViewController: UITableViewDelegate {
 
 extension CountryListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        viewModel.numberOfItems
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.selectionStyle = .none
-        cell.textLabel?.text = "Test \(indexPath.row)"
+        cell.textLabel?.text = viewModel.countryItem(at: indexPath.row)?.title
         return cell
     }
 }
