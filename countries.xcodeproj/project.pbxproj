@@ -16,6 +16,9 @@
 		1CE78D412842569A00718645 /* countriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D402842569A00718645 /* countriesTests.swift */; };
 		1CE78D4B2842569A00718645 /* countriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D4A2842569A00718645 /* countriesUITests.swift */; };
 		1CE78D4D2842569A00718645 /* countriesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D4C2842569A00718645 /* countriesUITestsLaunchTests.swift */; };
+		1CE78D5A2842963A00718645 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D592842963A00718645 /* TabbarController.swift */; };
+		1CE78D5D28429AE900718645 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D5B28429AE900718645 /* CountryListViewController.swift */; };
+		1CE78D5E28429AE900718645 /* CountryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE78D5C28429AE900718645 /* CountryListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		1CE78D462842569A00718645 /* countriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = countriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE78D4A2842569A00718645 /* countriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = countriesUITests.swift; sourceTree = "<group>"; };
 		1CE78D4C2842569A00718645 /* countriesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = countriesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1CE78D592842963A00718645 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		1CE78D5B28429AE900718645 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
+		1CE78D5C28429AE900718645 /* CountryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				1CE78D322842569A00718645 /* Assets.xcassets */,
 				1CE78D342842569A00718645 /* LaunchScreen.storyboard */,
 				1CE78D372842569A00718645 /* Info.plist */,
+				1CE78D592842963A00718645 /* TabbarController.swift */,
+				1CE78D5B28429AE900718645 /* CountryListViewController.swift */,
+				1CE78D5C28429AE900718645 /* CountryListViewController.xib */,
 			);
 			path = countries;
 			sourceTree = "<group>";
@@ -232,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CE78D362842569A00718645 /* LaunchScreen.storyboard in Resources */,
+				1CE78D5E28429AE900718645 /* CountryListViewController.xib in Resources */,
 				1CE78D332842569A00718645 /* Assets.xcassets in Resources */,
 				1CE78D312842569800718645 /* Main.storyboard in Resources */,
 			);
@@ -259,6 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CE78D2E2842569800718645 /* ViewController.swift in Sources */,
+				1CE78D5D28429AE900718645 /* CountryListViewController.swift in Sources */,
+				1CE78D5A2842963A00718645 /* TabbarController.swift in Sources */,
 				1CE78D2A2842569800718645 /* AppDelegate.swift in Sources */,
 				1CE78D2C2842569800718645 /* SceneDelegate.swift in Sources */,
 			);
@@ -367,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
