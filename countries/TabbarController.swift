@@ -15,15 +15,15 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     func setupTabs() {
-        let firstViewController = ViewController()
+        let firstViewController = CountryListViewController()
         let secondViewController = ViewController()
         
         let firstView: UIViewController = UINavigationController(rootViewController: firstViewController)
-        let tabbarItem = UITabBarItem(title: "First", image: UIImage(systemName: "person.fill"), tag: 0)
+        let tabbarItem = UITabBarItem(title: "Countries", image: UIImage(systemName: "list.bullet"), tag: 0)
         firstView.tabBarItem = tabbarItem
         
         let secondView: UIViewController = UINavigationController(rootViewController: secondViewController)
-        let tabbarItem2 = UITabBarItem(title: "Second", image: UIImage(systemName: "person"), tag: 1)
+        let tabbarItem2 = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 1)
         secondView.tabBarItem = tabbarItem2
 
         self.viewControllers = [firstView, secondView]

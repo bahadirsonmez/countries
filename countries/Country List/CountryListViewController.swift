@@ -11,6 +11,6 @@ class CountryListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+    
 }

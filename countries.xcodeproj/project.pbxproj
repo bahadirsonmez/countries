@@ -110,8 +110,7 @@
 				1CE78D342842569A00718645 /* LaunchScreen.storyboard */,
 				1CE78D372842569A00718645 /* Info.plist */,
 				1CE78D592842963A00718645 /* TabbarController.swift */,
-				1CE78D5B28429AE900718645 /* CountryListViewController.swift */,
-				1CE78D5C28429AE900718645 /* CountryListViewController.xib */,
+				1CE78D5F28429D0400718645 /* Country List */,
 			);
 			path = countries;
 			sourceTree = "<group>";
@@ -131,6 +130,15 @@
 				1CE78D4C2842569A00718645 /* countriesUITestsLaunchTests.swift */,
 			);
 			path = countriesUITests;
+			sourceTree = "<group>";
+		};
+		1CE78D5F28429D0400718645 /* Country List */ = {
+			isa = PBXGroup;
+			children = (
+				1CE78D5B28429AE900718645 /* CountryListViewController.swift */,
+				1CE78D5C28429AE900718645 /* CountryListViewController.xib */,
+			);
+			path = "Country List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
