@@ -20,9 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        configureAppearance()
         self.window?.rootViewController = tabbarController
         self.window?.makeKeyAndVisible()
         return true
+    }
+    
+    private func configureAppearance() {
+        UINavigationBar.appearance().tintColor = .label
+        UITabBar.appearance().tintColor = .label
     }
 }
 
