@@ -21,8 +21,8 @@
 		1CE78D632842C48900718645 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D622842C48900718645 /* CountryModel.swift */; };
 		1CE78D6728437C2C00718645 /* RegionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D6528437C2C00718645 /* RegionListViewController.swift */; };
 		1CE78D6828437C2C00718645 /* RegionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE78D6628437C2C00718645 /* RegionListViewController.xib */; };
-		1CE78D6F28437C9600718645 /* RegionItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D6D28437C9600718645 /* RegionItemTableViewCell.swift */; };
-		1CE78D7028437C9600718645 /* RegionItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE78D6E28437C9600718645 /* RegionItemTableViewCell.xib */; };
+		1CE78D6F28437C9600718645 /* BasicItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D6D28437C9600718645 /* BasicItemTableViewCell.swift */; };
+		1CE78D7028437C9600718645 /* BasicItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE78D6E28437C9600718645 /* BasicItemTableViewCell.xib */; };
 		1CE78D7228437D7000718645 /* RegionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D7128437D7000718645 /* RegionListViewModel.swift */; };
 		1CE78D762843810200718645 /* UITableViewCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D752843810200718645 /* UITableViewCell+extension.swift */; };
 		1CE78D792843892600718645 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1CE78D782843892600718645 /* Alamofire */; };
@@ -81,8 +81,8 @@
 		1CE78D622842C48900718645 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		1CE78D6528437C2C00718645 /* RegionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListViewController.swift; sourceTree = "<group>"; };
 		1CE78D6628437C2C00718645 /* RegionListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegionListViewController.xib; sourceTree = "<group>"; };
-		1CE78D6D28437C9600718645 /* RegionItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionItemTableViewCell.swift; sourceTree = "<group>"; };
-		1CE78D6E28437C9600718645 /* RegionItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegionItemTableViewCell.xib; sourceTree = "<group>"; };
+		1CE78D6D28437C9600718645 /* BasicItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicItemTableViewCell.swift; sourceTree = "<group>"; };
+		1CE78D6E28437C9600718645 /* BasicItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicItemTableViewCell.xib; sourceTree = "<group>"; };
 		1CE78D7128437D7000718645 /* RegionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListViewModel.swift; sourceTree = "<group>"; };
 		1CE78D752843810200718645 /* UITableViewCell+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+extension.swift"; sourceTree = "<group>"; };
 		1CE78D7B2843895300718645 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
@@ -227,8 +227,8 @@
 		1CE78D6C28437C6D00718645 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				1CE78D6D28437C9600718645 /* RegionItemTableViewCell.swift */,
-				1CE78D6E28437C9600718645 /* RegionItemTableViewCell.xib */,
+				1CE78D6D28437C9600718645 /* BasicItemTableViewCell.swift */,
+				1CE78D6E28437C9600718645 /* BasicItemTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -490,7 +490,7 @@
 				1CE78DA928441C3100718645 /* CountryDetailViewController.xib in Resources */,
 				1CE78D8E2843A8D600718645 /* CountryItemTableViewCell.xib in Resources */,
 				1CE78D5E28429AE900718645 /* CountryListViewController.xib in Resources */,
-				1CE78D7028437C9600718645 /* RegionItemTableViewCell.xib in Resources */,
+				1CE78D7028437C9600718645 /* BasicItemTableViewCell.xib in Resources */,
 				1CE78D332842569A00718645 /* Assets.xcassets in Resources */,
 				1CE78D992843B73A00718645 /* SearchViewController.xib in Resources */,
 				1CE78D312842569800718645 /* Main.storyboard in Resources */,
@@ -534,7 +534,7 @@
 				1CE78D5A2842963A00718645 /* TabBarController.swift in Sources */,
 				1CE78D612842A9F500718645 /* CountryListViewModel.swift in Sources */,
 				1CE78D902843A9AF00718645 /* UIImageView+extension.swift in Sources */,
-				1CE78D6F28437C9600718645 /* RegionItemTableViewCell.swift in Sources */,
+				1CE78D6F28437C9600718645 /* BasicItemTableViewCell.swift in Sources */,
 				1CE78D9E2843BAE300718645 /* SearchViewModel.swift in Sources */,
 				1CE78D942843B37F00718645 /* Array+extension.swift in Sources */,
 				1CE78D2A2842569800718645 /* AppDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  RegionItemTableViewCell.swift
+//  BasicItemTableViewCell.swift
 //  countries
 //
 //  Created by Bahadır Kişisel on 29.05.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegionItemTableViewCell: UITableViewCell {
+class BasicItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -16,7 +16,7 @@ class RegionItemTableViewCell: UITableViewCell {
         selectionStyle = .none
     }
     
-    var viewModel: RegionItemViewModel? {
+    var viewModel: BasicItemViewModel? {
         didSet {
             configureCell()
         }
