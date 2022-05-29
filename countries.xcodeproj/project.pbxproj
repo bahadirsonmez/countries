@@ -31,6 +31,7 @@
 		1CE78D7E2843896A00718645 /* BaseURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D7D2843896A00718645 /* BaseURLRequest.swift */; };
 		1CE78D8028438AAE00718645 /* Encodable+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D7F28438AAE00718645 /* Encodable+extension.swift */; };
 		1CE78D8228438B6600718645 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D8128438B6600718645 /* CountryService.swift */; };
+		1CE78D84284391EF00718645 /* CountryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D83284391EF00718645 /* CountryRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		1CE78D7D2843896A00718645 /* BaseURLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURLRequest.swift; sourceTree = "<group>"; };
 		1CE78D7F28438AAE00718645 /* Encodable+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+extension.swift"; sourceTree = "<group>"; };
 		1CE78D8128438B6600718645 /* CountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
+		1CE78D83284391EF00718645 /* CountryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				1CE78D602842A9F500718645 /* CountryListViewModel.swift */,
 				1CE78D622842C48900718645 /* CountryModel.swift */,
 				1CE78D8128438B6600718645 /* CountryService.swift */,
+				1CE78D83284391EF00718645 /* CountryRequest.swift */,
 			);
 			path = "Country List";
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				1CE78D6F28437C9600718645 /* ContinentItemTableViewCell.swift in Sources */,
 				1CE78D2A2842569800718645 /* AppDelegate.swift in Sources */,
 				1CE78D7C2843895300718645 /* BaseService.swift in Sources */,
+				1CE78D84284391EF00718645 /* CountryRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
