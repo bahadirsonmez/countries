@@ -37,6 +37,8 @@
 		1CE78D902843A9AF00718645 /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D8F2843A9AF00718645 /* UIImageView+extension.swift */; };
 		1CE78D922843AC5300718645 /* CountryItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D912843AC5300718645 /* CountryItemViewModel.swift */; };
 		1CE78D942843B37F00718645 /* Array+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D932843B37F00718645 /* Array+extension.swift */; };
+		1CE78D982843B73A00718645 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D962843B73A00718645 /* SearchViewController.swift */; };
+		1CE78D992843B73A00718645 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE78D972843B73A00718645 /* SearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		1CE78D8F2843A9AF00718645 /* UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
 		1CE78D912843AC5300718645 /* CountryItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItemViewModel.swift; sourceTree = "<group>"; };
 		1CE78D932843B37F00718645 /* Array+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+extension.swift"; sourceTree = "<group>"; };
+		1CE78D962843B73A00718645 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1CE78D972843B73A00718645 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 				1CE78D342842569A00718645 /* LaunchScreen.storyboard */,
 				1CE78D372842569A00718645 /* Info.plist */,
 				1CE78D592842963A00718645 /* TabbarController.swift */,
+				1CE78D952843B71D00718645 /* Search */,
 				1CE78D6428437C0D00718645 /* Region List */,
 				1CE78D5F28429D0400718645 /* Country List */,
 			);
@@ -301,6 +306,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		1CE78D952843B71D00718645 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1CE78D962843B73A00718645 /* SearchViewController.swift */,
+				1CE78D972843B73A00718645 /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -417,6 +431,7 @@
 				1CE78D5E28429AE900718645 /* CountryListViewController.xib in Resources */,
 				1CE78D7028437C9600718645 /* RegionItemTableViewCell.xib in Resources */,
 				1CE78D332842569A00718645 /* Assets.xcassets in Resources */,
+				1CE78D992843B73A00718645 /* SearchViewController.xib in Resources */,
 				1CE78D312842569800718645 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +467,7 @@
 				1CE78D632842C48900718645 /* CountryModel.swift in Sources */,
 				1CE78D762843810200718645 /* UITableViewCell+extension.swift in Sources */,
 				1CE78D7E2843896A00718645 /* BaseURLRequest.swift in Sources */,
+				1CE78D982843B73A00718645 /* SearchViewController.swift in Sources */,
 				1CE78D5A2842963A00718645 /* TabbarController.swift in Sources */,
 				1CE78D612842A9F500718645 /* CountryListViewModel.swift in Sources */,
 				1CE78D902843A9AF00718645 /* UIImageView+extension.swift in Sources */,
