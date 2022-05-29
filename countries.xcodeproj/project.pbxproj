@@ -27,6 +27,10 @@
 		1CE78D7228437D7000718645 /* ContinentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D7128437D7000718645 /* ContinentListViewModel.swift */; };
 		1CE78D762843810200718645 /* UITableViewCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D752843810200718645 /* UITableViewCell+extension.swift */; };
 		1CE78D792843892600718645 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1CE78D782843892600718645 /* Alamofire */; };
+		1CE78D7C2843895300718645 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D7B2843895300718645 /* BaseService.swift */; };
+		1CE78D7E2843896A00718645 /* BaseURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D7D2843896A00718645 /* BaseURLRequest.swift */; };
+		1CE78D8028438AAE00718645 /* Encodable+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D7F28438AAE00718645 /* Encodable+extension.swift */; };
+		1CE78D8228438B6600718645 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D8128438B6600718645 /* CountryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,10 @@
 		1CE78D6E28437C9600718645 /* ContinentItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContinentItemTableViewCell.xib; sourceTree = "<group>"; };
 		1CE78D7128437D7000718645 /* ContinentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinentListViewModel.swift; sourceTree = "<group>"; };
 		1CE78D752843810200718645 /* UITableViewCell+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+extension.swift"; sourceTree = "<group>"; };
+		1CE78D7B2843895300718645 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		1CE78D7D2843896A00718645 /* BaseURLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURLRequest.swift; sourceTree = "<group>"; };
+		1CE78D7F28438AAE00718645 /* Encodable+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+extension.swift"; sourceTree = "<group>"; };
+		1CE78D8128438B6600718645 /* CountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +129,8 @@
 		1CE78D282842569800718645 /* countries */ = {
 			isa = PBXGroup;
 			children = (
-				1CE78D74284380EE00718645 /* Extentions */,
+				1CE78D7A2843893500718645 /* Network */,
+				1CE78D74284380EE00718645 /* Extensions */,
 				1CE78D292842569800718645 /* AppDelegate.swift */,
 				1CE78D2D2842569800718645 /* ViewController.swift */,
 				1CE78D2F2842569800718645 /* Main.storyboard */,
@@ -159,6 +168,7 @@
 				1CE78D5C28429AE900718645 /* CountryListViewController.xib */,
 				1CE78D602842A9F500718645 /* CountryListViewModel.swift */,
 				1CE78D622842C48900718645 /* CountryModel.swift */,
+				1CE78D8128438B6600718645 /* CountryService.swift */,
 			);
 			path = "Country List";
 			sourceTree = "<group>";
@@ -207,12 +217,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		1CE78D74284380EE00718645 /* Extentions */ = {
+		1CE78D74284380EE00718645 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1CE78D7F28438AAE00718645 /* Encodable+extension.swift */,
 				1CE78D752843810200718645 /* UITableViewCell+extension.swift */,
 			);
-			path = Extentions;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1CE78D7A2843893500718645 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1CE78D7B2843895300718645 /* BaseService.swift */,
+				1CE78D7D2843896A00718645 /* BaseURLRequest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,16 +375,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE78D8028438AAE00718645 /* Encodable+extension.swift in Sources */,
 				1CE78D2E2842569800718645 /* ViewController.swift in Sources */,
+				1CE78D8228438B6600718645 /* CountryService.swift in Sources */,
 				1CE78D7228437D7000718645 /* ContinentListViewModel.swift in Sources */,
 				1CE78D6728437C2C00718645 /* ContinentListViewController.swift in Sources */,
 				1CE78D5D28429AE900718645 /* CountryListViewController.swift in Sources */,
 				1CE78D632842C48900718645 /* CountryModel.swift in Sources */,
 				1CE78D762843810200718645 /* UITableViewCell+extension.swift in Sources */,
+				1CE78D7E2843896A00718645 /* BaseURLRequest.swift in Sources */,
 				1CE78D5A2842963A00718645 /* TabbarController.swift in Sources */,
 				1CE78D612842A9F500718645 /* CountryListViewModel.swift in Sources */,
 				1CE78D6F28437C9600718645 /* ContinentItemTableViewCell.swift in Sources */,
 				1CE78D2A2842569800718645 /* AppDelegate.swift in Sources */,
+				1CE78D7C2843895300718645 /* BaseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
