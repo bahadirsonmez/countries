@@ -9,12 +9,17 @@ import Foundation
 
 class SearchViewModel: NSObject {
     
-    private var countries = [Country]()
-    private let service = CountryService()
+    private var countries = [Country]() {
+        didSet {
+            self.reloadCompletion?()
+        }
+    }
+    
+    private let service = SearchService()
     
     var searchText: String? = nil {
         didSet {
-            getCountries()
+            searchCountryByName()
         }
     }
     
@@ -32,13 +37,16 @@ class SearchViewModel: NSObject {
         CountryItemViewModel(with: countries[index])
     }
     
-    func getCountries() {
-        let request = CountryRequest(with: .europe)
-        service.getCountries(request: request) { [weak self] result in
+    func searchCountryByName() {
+        guard let query = searchText else {
+            countries.removeAll()
+            return
+        }
+        let request = SearchRequest(with: query)
+        service.searchCountryByName(request: request) { [weak self] result in
             switch result {
             case .success(let countries):
                 self?.countries = countries
-                self?.reloadCompletion?()
             case .failure(let error):
                 print(error.localizedDescription)
             }
