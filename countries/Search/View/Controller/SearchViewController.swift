@@ -82,7 +82,7 @@ extension SearchViewController: UITableViewDataSource {
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         NSObject.cancelPreviousPerformRequests(withTarget: self)
-        perform(#selector(updateWithDebouncer(text:)), with: searchText, afterDelay: 0.3)
+        perform(#selector(updateWithDebouncer(text:)), with: searchText, afterDelay: 0.4)
     }
     
     @objc func updateWithDebouncer(text: String) {
