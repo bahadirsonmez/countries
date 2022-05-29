@@ -9,9 +9,9 @@ import Foundation
 
 final class CountryRequest: BaseURLRequest {
     
-    init(with region: Region) {
+    init(with region: String) {
         super.init()
         self.method = .get
-        self.path = "v3.1/region/\(region.rawValue)"
+        self.path = "v3.1/region/\(region)"
     }
 }

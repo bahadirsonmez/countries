@@ -18,20 +18,20 @@ class RegionListViewModel {
         regions.count
     }
     
-    func regionItemViewModel(at index: Int) -> RegionItemViewModel {
-        RegionItemViewModel(with: regions[index])
+    func regionItemViewModel(at index: Int) -> BasicItemViewModel {
+        BasicItemViewModel(with: regions[index].rawValue)
     }
 }
 
-class RegionItemViewModel {
-    let region: Region
+class BasicItemViewModel {
+    let region: String
     
-    init(with region: Region) {
+    init(with region: String) {
         self.region = region
     }
     
     var title: String? {
-        region.rawValue
+        region
     }
 }
 

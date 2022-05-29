@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountryDetailViewController" customModule="countries" customModuleProvider="target">
             <connections>
+                <outlet property="closeButton" destination="h7I-CC-5if" id="aF8-vV-SWh"/>
                 <outlet property="currenciesLabel" destination="WWH-lG-zzJ" id="uCb-zU-z3q"/>
                 <outlet property="flagImageView" destination="UGy-a9-8wn" id="or2-pw-EfC"/>
                 <outlet property="languagesLabel" destination="J9l-Tf-tm3" id="p2d-TH-I4h"/>
@@ -34,9 +35,9 @@
                         <constraint firstAttribute="height" constant="24" id="61u-ap-QoZ"/>
                         <constraint firstAttribute="width" constant="24" id="zoE-Ps-o4y"/>
                     </constraints>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" image="multiply" catalog="system"/>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="multiply" catalog="system"/>
                     <connections>
                         <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="fya-ig-bkh"/>
                     </connections>
@@ -96,6 +97,9 @@
     </objects>
     <resources>
         <image name="multiply" catalog="system" width="128" height="111"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

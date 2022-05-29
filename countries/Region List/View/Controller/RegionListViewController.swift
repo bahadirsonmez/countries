@@ -36,7 +36,7 @@ class RegionListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .singleLine
-        tableView.register(cell: RegionItemTableViewCell.self)
+        tableView.register(cell: BasicItemTableViewCell.self)
         tableView.reloadData()
     }
 
@@ -57,7 +57,7 @@ extension RegionListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeue(cell: RegionItemTableViewCell.self, for: indexPath)
+        let cell = tableView.dequeue(cell: BasicItemTableViewCell.self, for: indexPath)
         cell.viewModel = viewModel.regionItemViewModel(at: indexPath.row)
         return cell
     }

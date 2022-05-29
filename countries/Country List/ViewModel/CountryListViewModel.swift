@@ -15,16 +15,16 @@ class CountryListViewModel: NSObject {
         }
     }
     private let service = CountryService()
-    private let region: Region
+    private let region: String
     
     var reloadCompletion: (() -> Void)?
     
-    init(with region: Region) {
+    init(with region: String) {
         self.region = region
     }
     
     var title: String? {
-        region.rawValue
+        region
     }
         
     var numberOfItems: Int {
