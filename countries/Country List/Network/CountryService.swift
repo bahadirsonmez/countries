@@ -9,8 +9,12 @@ import Alamofire
 
 class CountryService: BaseService {
     
-    func getCountriesByRegion(request: CountryRequest, completion:@escaping (Result<[Country], AFError>)->Void) {
+    func getCountriesByRegion(request: CountryByRegionRequest, completion:@escaping (Result<[Country], AFError>)->Void) {
         self.performRequest(request: request, completion: completion)
     }
     
+    func getCountriesByCode(request: CountryByCodeRequest, completion:@escaping (Result<[Country], AFError>)->Void) {
+        self.performRequest(request: request, completion: completion)
+    }
+
 }

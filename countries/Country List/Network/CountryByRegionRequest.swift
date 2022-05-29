@@ -15,3 +15,12 @@ final class CountryByRegionRequest: BaseURLRequest {
         self.path = "v3.1/region/\(region)"
     }
 }
+
+final class CountryByCodeRequest: BaseURLRequest {
+    
+    init(with code: String) {
+        super.init()
+        self.method = .get
+        self.path = "v3.1/alpha/\(code)"
+    }
+}

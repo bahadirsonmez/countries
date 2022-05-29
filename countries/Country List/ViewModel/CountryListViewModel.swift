@@ -31,12 +31,16 @@ class CountryListViewModel: NSObject {
         countries.count
     }
     
-    func countryItem(at index: Int) -> CountryItemViewModel? {
+    func countryItem(at index: Int) -> CountryItemViewModel {
         CountryItemViewModel(with: countries[index])
     }
     
+    func country(at index: Int) -> Country {
+        countries[index]
+    }
+    
     func getCountries() {
-        let request = CountryRequest(with: region)
+        let request = CountryByRegionRequest(with: region)
         service.getCountriesByRegion(request: request) { [weak self] result in
             switch result {
             case .success(let countries):
