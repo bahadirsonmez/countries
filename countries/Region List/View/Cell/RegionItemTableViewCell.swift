@@ -1,5 +1,5 @@
 //
-//  ContinentItemTableViewCell.swift
+//  RegionItemTableViewCell.swift
 //  countries
 //
 //  Created by Bahadır Kişisel on 29.05.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContinentItemTableViewCell: UITableViewCell {
+class RegionItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     

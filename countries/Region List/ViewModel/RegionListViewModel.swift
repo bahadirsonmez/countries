@@ -1,5 +1,5 @@
 //
-//  ContinentListViewModel.swift
+//  RegionListViewModel.swift
 //  countries
 //
 //  Created by Bahadır Kişisel on 29.05.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ContinentListViewModel {
+class RegionListViewModel {
     let regions: [Region]
     
     init(with continents: [Region]) {
