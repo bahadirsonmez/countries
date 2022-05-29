@@ -17,10 +17,6 @@ extension ReusableCell where Self: UITableViewCell {
     static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
 }
 
-protocol CellTapConfigurable: AnyObject {
-    var tapHandler: (() -> ())? { get set }
-}
-
 extension UITableViewCell: ReusableCell {}
 
 extension UITableView {
