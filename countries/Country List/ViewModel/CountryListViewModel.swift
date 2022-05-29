@@ -37,7 +37,7 @@ class CountryListViewModel: NSObject {
     
     func getCountries() {
         let request = CountryRequest(with: region)
-        service.getCountries(request: request) { [weak self] result in
+        service.getCountriesByRegion(request: request) { [weak self] result in
             switch result {
             case .success(let countries):
                 self?.countries = countries
