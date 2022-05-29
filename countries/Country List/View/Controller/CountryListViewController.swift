@@ -38,7 +38,7 @@ class CountryListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .singleLine
-        tableView.reloadData()
+        tableView.register(cell: CountryItemTableViewCell.self)
     }
     
     private func bindViewModel() {
@@ -53,6 +53,14 @@ extension CountryListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        104.0
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        104.0
+    }
 }
 
 extension CountryListViewController: UITableViewDataSource {
@@ -61,9 +69,8 @@ extension CountryListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.selectionStyle = .none
-        cell.textLabel?.text = viewModel.countryItem(at: indexPath.row)?.title
+        let cell = tableView.dequeue(cell: CountryItemTableViewCell.self, for: indexPath)
+        cell.viewModel = viewModel.countryItem(at: indexPath.row)
         return cell
     }
 }
