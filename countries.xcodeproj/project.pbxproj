@@ -40,6 +40,8 @@
 		1CE78D982843B73A00718645 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D962843B73A00718645 /* SearchViewController.swift */; };
 		1CE78D992843B73A00718645 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE78D972843B73A00718645 /* SearchViewController.xib */; };
 		1CE78D9E2843BAE300718645 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D9D2843BAE300718645 /* SearchViewModel.swift */; };
+		1CE78DA12843BD7700718645 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DA02843BD7700718645 /* SearchService.swift */; };
+		1CE78DA32843BD9400718645 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DA22843BD9400718645 /* SearchRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		1CE78D962843B73A00718645 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1CE78D972843B73A00718645 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		1CE78D9D2843BAE300718645 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		1CE78DA02843BD7700718645 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		1CE78DA22843BD9400718645 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +315,7 @@
 		1CE78D952843B71D00718645 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				1CE78D9F2843BD6700718645 /* Network */,
 				1CE78D9C2843BAD200718645 /* ViewModel */,
 				1CE78D9A2843BA4000718645 /* View */,
 			);
@@ -340,6 +345,15 @@
 				1CE78D9D2843BAE300718645 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1CE78D9F2843BD6700718645 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1CE78DA02843BD7700718645 /* SearchService.swift */,
+				1CE78DA22843BD9400718645 /* SearchRequest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,7 +500,9 @@
 			files = (
 				1CE78D922843AC5300718645 /* CountryItemViewModel.swift in Sources */,
 				1CE78D8028438AAE00718645 /* Encodable+extension.swift in Sources */,
+				1CE78DA32843BD9400718645 /* SearchRequest.swift in Sources */,
 				1CE78D2E2842569800718645 /* ViewController.swift in Sources */,
+				1CE78DA12843BD7700718645 /* SearchService.swift in Sources */,
 				1CE78D8228438B6600718645 /* CountryService.swift in Sources */,
 				1CE78D7228437D7000718645 /* RegionListViewModel.swift in Sources */,
 				1CE78D6728437C2C00718645 /* RegionListViewController.swift in Sources */,
