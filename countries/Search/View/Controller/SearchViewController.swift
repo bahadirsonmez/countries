@@ -26,11 +26,11 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        viewModel.getCountries()
     }
     
     private func setup() {
         configureTableView()
+        configureSearchBar()
         bindViewModel()
         title = viewModel.title
     }
