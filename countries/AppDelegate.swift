@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var tabbarController: UINavigationController {
-        let viewController = TabbarController()
+        let viewController = TabBarController()
         let navController = UINavigationController(rootViewController: viewController)
         return navController
     }
