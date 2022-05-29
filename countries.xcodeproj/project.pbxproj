@@ -309,10 +309,26 @@
 		1CE78D952843B71D00718645 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				1CE78D9A2843BA4000718645 /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		1CE78D9A2843BA4000718645 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CE78D9B2843BA4D00718645 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1CE78D9B2843BA4D00718645 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				1CE78D962843B73A00718645 /* SearchViewController.swift */,
 				1CE78D972843B73A00718645 /* SearchViewController.xib */,
 			);
-			path = Search;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
