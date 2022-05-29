@@ -17,8 +17,8 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
     
     func setupTabs() {
         let regions: [Region] = [.africa, .americas, .oceania, .europe, .asia, .antarctic]
-        let continentsViewModel = ContinentListViewModel(with: regions)
-        let firstViewController = ContinentListViewController(viewModel: continentsViewModel)
+        let regionListViewModel = RegionListViewModel(with: regions)
+        let firstViewController = RegionListViewController(viewModel: regionListViewModel)
         let secondViewController = ViewController()
         
         let firstView: UIViewController = UINavigationController(rootViewController: firstViewController)

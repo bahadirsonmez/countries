@@ -16,7 +16,7 @@ class RegionItemTableViewCell: UITableViewCell {
         selectionStyle = .none
     }
     
-    var viewModel: ContinentItemViewModel? {
+    var viewModel: RegionItemViewModel? {
         didSet {
             configureCell()
         }

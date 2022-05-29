@@ -10,20 +10,20 @@ import Foundation
 class RegionListViewModel {
     let regions: [Region]
     
-    init(with continents: [Region]) {
-        self.regions = continents
+    init(with regions: [Region]) {
+        self.regions = regions
     }
     
     var numberOfItems: Int {
         regions.count
     }
     
-    func continentItemViewModel(at index: Int) -> ContinentItemViewModel {
-        ContinentItemViewModel(with: regions[index])
+    func regionItemViewModel(at index: Int) -> RegionItemViewModel {
+        RegionItemViewModel(with: regions[index])
     }
 }
 
-class ContinentItemViewModel {
+class RegionItemViewModel {
     let region: Region
     
     init(with region: Region) {

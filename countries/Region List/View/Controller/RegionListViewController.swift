@@ -11,9 +11,9 @@ class RegionListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
         
-    private let viewModel: ContinentListViewModel
+    private let viewModel: RegionListViewModel
         
-    init(viewModel: ContinentListViewModel) {
+    init(viewModel: RegionListViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -24,7 +24,7 @@ class RegionListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Continents"
+        self.title = "Regions"
         setup()
     }
     
@@ -44,7 +44,7 @@ class RegionListViewController: UIViewController {
 
 extension RegionListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let region = viewModel.continentItemViewModel(at: indexPath.row).region
+        let region = viewModel.regionItemViewModel(at: indexPath.row).region
         let viewModel = CountryListViewModel(with: region)
         let viewController = CountryListViewController(viewModel: viewModel)
         navigationController?.pushViewController(viewController, animated: true)
@@ -58,7 +58,7 @@ extension RegionListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(cell: RegionItemTableViewCell.self, for: indexPath)
-        cell.viewModel = viewModel.continentItemViewModel(at: indexPath.row)
+        cell.viewModel = viewModel.regionItemViewModel(at: indexPath.row)
         return cell
     }
 }
