@@ -13,12 +13,11 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         setupTabs()
         self.tabBar.isOpaque = true
-        self.tabBar.backgroundColor = .black.withAlphaComponent(0.2)
     }
     
     func setupTabs() {
-        let continents: [Continent] = [.africa, .antarctica, .asia, .europe, .northAmerica, .oceania, .southAmerica]
-        let continentsViewModel = ContinentListViewModel(with: continents)
+        let regions: [Region] = [.africa, .americas, .oceania, .europe, .asia, .antarctic]
+        let continentsViewModel = ContinentListViewModel(with: regions)
         let firstViewController = ContinentListViewController(viewModel: continentsViewModel)
         let secondViewController = ViewController()
         

@@ -44,8 +44,8 @@ class ContinentListViewController: UIViewController {
 
 extension ContinentListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let continentName = viewModel.continentItemViewModel(at: indexPath.row).continent.rawValue
-        let viewModel = CountryListViewModel(with: continentName)
+        let region = viewModel.continentItemViewModel(at: indexPath.row).region
+        let viewModel = CountryListViewModel(with: region)
         let viewController = CountryListViewController(viewModel: viewModel)
         navigationController?.pushViewController(viewController, animated: true)
     }

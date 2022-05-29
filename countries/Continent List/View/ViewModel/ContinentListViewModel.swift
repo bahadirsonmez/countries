@@ -8,30 +8,30 @@
 import Foundation
 
 class ContinentListViewModel {
-    let continents: [Continent]
+    let regions: [Region]
     
-    init(with continents: [Continent]) {
-        self.continents = continents
+    init(with continents: [Region]) {
+        self.regions = continents
     }
     
     var numberOfItems: Int {
-        continents.count
+        regions.count
     }
     
     func continentItemViewModel(at index: Int) -> ContinentItemViewModel {
-        ContinentItemViewModel(with: continents[index])
+        ContinentItemViewModel(with: regions[index])
     }
 }
 
 class ContinentItemViewModel {
-    let continent: Continent
+    let region: Region
     
-    init(with continent: Continent) {
-        self.continent = continent
+    init(with region: Region) {
+        self.region = region
     }
     
     var title: String? {
-        continent.rawValue
+        region.rawValue
     }
 }
 

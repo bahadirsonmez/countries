@@ -22,14 +22,17 @@ class CountryItemViewModel {
 class CountryListViewModel: NSObject {
     
     private var countries = [Country]()
-    private let continentName: String
+    private let service = CountryService()
+    private let region: Region
     
-    init(with name: String) {
-        self.continentName = name
+    var reloadCompletion: (() -> Void)?
+    
+    init(with region: Region) {
+        self.region = region
     }
     
     var title: String? {
-        continentName
+        region.rawValue
     }
         
     var numberOfItems: Int {
