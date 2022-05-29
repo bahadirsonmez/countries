@@ -21,14 +21,23 @@ class CountryItemViewModel {
 
 class CountryListViewModel: NSObject {
     
-    var data = [Country]()
+    private var countries = [Country]()
+    private let continentName: String
+    
+    init(with name: String) {
+        self.continentName = name
+    }
+    
+    var title: String? {
+        continentName
+    }
         
     var numberOfItems: Int {
-        return data.count
+        countries.count
     }
     
     func countryItem(at index: Int) -> CountryItemViewModel? {
-        CountryItemViewModel(with: data[index])
+        CountryItemViewModel(with: countries[index])
     }
 
 }

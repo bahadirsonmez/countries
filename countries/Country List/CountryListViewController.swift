@@ -24,12 +24,12 @@ class CountryListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Countries"
         setup()
     }
     
     private func setup() {
         configureTableView()
+        title = viewModel.title
     }
     
     private func configureTableView() {
