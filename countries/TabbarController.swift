@@ -20,8 +20,8 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
         let regionListViewModel = RegionListViewModel(with: regions)
         let firstViewController = RegionListViewController(viewModel: regionListViewModel)
         
-        let countryListViewModel = CountryListViewModel(with: .europe)
-        let secondViewController = SearchViewController(viewModel: countryListViewModel)
+        let searchViewModel = SearchViewModel()
+        let secondViewController = SearchViewController(viewModel: searchViewModel)
         
         let firstView: UIViewController = UINavigationController(rootViewController: firstViewController)
         let tabbarItem = UITabBarItem(title: "Countries", image: UIImage(systemName: "list.bullet"), tag: 0)

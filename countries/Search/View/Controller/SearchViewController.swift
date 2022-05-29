@@ -12,9 +12,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    private let viewModel: CountryListViewModel
+    private let viewModel: SearchViewModel
         
-    init(viewModel: CountryListViewModel) {
+    init(viewModel: SearchViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
