@@ -25,10 +25,12 @@ class CountryListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        viewModel.getCountries()
     }
     
     private func setup() {
         configureTableView()
+        bindViewModel()
         title = viewModel.title
     }
     
@@ -37,6 +39,12 @@ class CountryListViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .singleLine
         tableView.reloadData()
+    }
+    
+    private func bindViewModel() {
+        viewModel.reloadCompletion = { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
     
 }

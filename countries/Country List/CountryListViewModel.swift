@@ -42,5 +42,18 @@ class CountryListViewModel: NSObject {
     func countryItem(at index: Int) -> CountryItemViewModel? {
         CountryItemViewModel(with: countries[index])
     }
+    
+    func getCountries() {
+        let request = CountryRequest(with: region)
+        service.getCountries(request: request) { [weak self] result in
+            switch result {
+            case .success(let countries):
+                self?.countries = countries
+                self?.reloadCompletion?()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 
 }
