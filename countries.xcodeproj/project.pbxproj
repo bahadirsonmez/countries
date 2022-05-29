@@ -19,6 +19,7 @@
 		1CE78D5D28429AE900718645 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D5B28429AE900718645 /* CountryListViewController.swift */; };
 		1CE78D5E28429AE900718645 /* CountryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE78D5C28429AE900718645 /* CountryListViewController.xib */; };
 		1CE78D612842A9F500718645 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D602842A9F500718645 /* CountryListViewModel.swift */; };
+		1CE78D632842C48900718645 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D622842C48900718645 /* CountryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		1CE78D5B28429AE900718645 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
 		1CE78D5C28429AE900718645 /* CountryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryListViewController.xib; sourceTree = "<group>"; };
 		1CE78D602842A9F500718645 /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
+		1CE78D622842C48900718645 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				1CE78D5B28429AE900718645 /* CountryListViewController.swift */,
 				1CE78D5C28429AE900718645 /* CountryListViewController.xib */,
 				1CE78D602842A9F500718645 /* CountryListViewModel.swift */,
+				1CE78D622842C48900718645 /* CountryModel.swift */,
 			);
 			path = "Country List";
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			files = (
 				1CE78D2E2842569800718645 /* ViewController.swift in Sources */,
 				1CE78D5D28429AE900718645 /* CountryListViewController.swift in Sources */,
+				1CE78D632842C48900718645 /* CountryModel.swift in Sources */,
 				1CE78D5A2842963A00718645 /* TabbarController.swift in Sources */,
 				1CE78D612842A9F500718645 /* CountryListViewModel.swift in Sources */,
 				1CE78D2A2842569800718645 /* AppDelegate.swift in Sources */,

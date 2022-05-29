@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct Country: Codable {
-    let title: String?
-}
-
 class CountryItemViewModel {
     let country: Country
     
@@ -19,23 +15,16 @@ class CountryItemViewModel {
     }
     
     var title: String? {
-        country.title
+        country.name?.common
     }
 }
 
 class CountryListViewModel: NSObject {
     
-    var data: [Country] {
-        var array = [Country]()
-        for i in 0...numberOfItems {
-            let country = Country(title: "Test \(i)")
-            array.append(country)
-        }
-        return array
-    }
-    
+    var data = [Country]()
+        
     var numberOfItems: Int {
-        return 50
+        return data.count
     }
     
     func countryItem(at index: Int) -> CountryItemViewModel? {
