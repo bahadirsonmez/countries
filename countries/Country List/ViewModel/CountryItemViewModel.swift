@@ -19,7 +19,7 @@ class CountryItemViewModel {
     }
     
     var nativeTitles: String? {
-        let titles = country.name?.nativeName?.compactMap { $0.value.common }
+        let titles = country.name?.nativeName?.values.compactMap(\.common)
             .removingDuplicates()
             .joined(separator: ", ")
         return titles

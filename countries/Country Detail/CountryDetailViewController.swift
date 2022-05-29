@@ -15,9 +15,9 @@ class CountryDetailViewController: UIViewController {
     @IBOutlet weak var neighboursTableView: UITableView!
     @IBOutlet weak var closeButton: UIButton!
     
-    private let viewModel: RegionListViewModel
+    private let viewModel: CountryDetailViewModel
         
-    init(viewModel: RegionListViewModel) {
+    init(viewModel: CountryDetailViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -29,13 +29,12 @@ class CountryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-//        viewModel.getCountries()
     }
     
     private func setup() {
         configureTableView()
+        configure()
         bindViewModel()
-//        title = viewModel.title
     }
     
     private func configureTableView() {
@@ -43,13 +42,21 @@ class CountryDetailViewController: UIViewController {
         neighboursTableView.dataSource = self
         neighboursTableView.separatorStyle = .singleLine
         neighboursTableView.register(cell: BasicItemTableViewCell.self)
+    }
+    
+    private func configure() {
+        flagImageView.imageFromServerURL(viewModel.flagUrl, placeHolder: UIImage(systemName: "flag.fill"))
+        currenciesLabel.text = viewModel.currencies
+        languagesLabel.text = viewModel.languages
         neighboursTableView.reloadData()
     }
     
     private func bindViewModel() {
-//        viewModel.reloadCompletion = { [weak self] in
-//            self?.neighboursTableView.reloadData()
-//        }
+        viewModel.countryRetrieved = { [weak self] country in
+            let viewModel = CountryDetailViewModel(with: country)
+            let viewController = CountryDetailViewController(viewModel: viewModel)
+            self?.present(viewController, animated: true, completion: nil)
+        }
     }
 
     @IBAction func closeButtonTapped(_ sender: UIButton) {
@@ -59,7 +66,7 @@ class CountryDetailViewController: UIViewController {
 
 extension CountryDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        viewModel.getCountry(at: indexPath.row)
     }
 }
 
@@ -70,7 +77,7 @@ extension CountryDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(cell: BasicItemTableViewCell.self, for: indexPath)
-        cell.viewModel = viewModel.regionItemViewModel(at: indexPath.row)
+        cell.viewModel = viewModel.countryItem(at: indexPath.row)
         return cell
     }
 }

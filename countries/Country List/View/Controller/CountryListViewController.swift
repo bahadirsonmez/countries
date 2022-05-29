@@ -51,7 +51,7 @@ class CountryListViewController: UIViewController {
 
 extension CountryListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewModel = RegionListViewModel(with: [.asia, .europe, .antarctic])
+        let viewModel = CountryDetailViewModel(with: viewModel.country(at: indexPath.row))
         let viewController = CountryDetailViewController(viewModel: viewModel)
         present(viewController, animated: true, completion: nil)
     }

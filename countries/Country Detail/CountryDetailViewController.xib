@@ -23,14 +23,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UGy-a9-8wn">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UGy-a9-8wn">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="iia-H3-VKJ"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7I-CC-5if">
-                    <rect key="frame" x="378" y="44" width="24" height="24"/>
+                    <rect key="frame" x="370" y="20" width="24" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="61u-ap-QoZ"/>
                         <constraint firstAttribute="width" constant="24" id="zoE-Ps-o4y"/>
@@ -73,7 +73,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="ScP-Qb-J5J" firstAttribute="top" secondItem="9nl-14-2e7" secondAttribute="bottom" constant="12" id="0Ss-dl-fNR"/>
-                <constraint firstAttribute="trailing" secondItem="h7I-CC-5if" secondAttribute="trailing" constant="12" id="3bu-AA-6vW"/>
+                <constraint firstAttribute="trailing" secondItem="h7I-CC-5if" secondAttribute="trailing" constant="20" id="3bu-AA-6vW"/>
                 <constraint firstAttribute="trailing" secondItem="UGy-a9-8wn" secondAttribute="trailing" id="8j3-bi-7Hl"/>
                 <constraint firstItem="ScP-Qb-J5J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="B8Z-3c-Jqc"/>
                 <constraint firstItem="9nl-14-2e7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="Dko-oE-Uf5"/>
@@ -81,7 +81,7 @@
                 <constraint firstItem="UGy-a9-8wn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Njw-po-au1"/>
                 <constraint firstItem="9nl-14-2e7" firstAttribute="top" secondItem="UGy-a9-8wn" secondAttribute="bottom" constant="12" id="STM-gk-2sS"/>
                 <constraint firstItem="J9l-Tf-tm3" firstAttribute="leading" secondItem="ScP-Qb-J5J" secondAttribute="trailing" constant="6" id="VrM-OD-wwu"/>
-                <constraint firstItem="h7I-CC-5if" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="WAD-pV-rf7"/>
+                <constraint firstItem="h7I-CC-5if" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="WAD-pV-rf7"/>
                 <constraint firstItem="nNj-Tl-nNL" firstAttribute="top" secondItem="ScP-Qb-J5J" secondAttribute="bottom" constant="12" id="WG3-hq-s2j"/>
                 <constraint firstItem="WWH-lG-zzJ" firstAttribute="leading" secondItem="9nl-14-2e7" secondAttribute="trailing" constant="6" id="XYJ-UA-Cj0"/>
                 <constraint firstAttribute="bottom" secondItem="nNj-Tl-nNL" secondAttribute="bottom" id="dOu-P2-gbV"/>

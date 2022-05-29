@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class CountryRequest: BaseURLRequest {
+final class CountryByRegionRequest: BaseURLRequest {
     
     init(with region: String) {
         super.init()
