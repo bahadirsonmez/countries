@@ -42,6 +42,10 @@ class SearchViewController: UIViewController {
         tableView.register(cell: CountryItemTableViewCell.self)
     }
     
+    private func configureSearchBar() {
+        searchBar.delegate = self
+    }
+    
     private func bindViewModel() {
         viewModel.reloadCompletion = { [weak self] in
             self?.tableView.reloadData()
@@ -72,5 +76,11 @@ extension SearchViewController: UITableViewDataSource {
         let cell = tableView.dequeue(cell: CountryItemTableViewCell.self, for: indexPath)
         cell.viewModel = viewModel.countryItem(at: indexPath.row)
         return cell
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.searchText = searchText > 2 ? searchText : nil
     }
 }
