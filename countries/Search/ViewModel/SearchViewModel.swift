@@ -48,6 +48,7 @@ class SearchViewModel: NSObject {
             case .success(let countries):
                 self?.countries = countries
             case .failure(let error):
+                self?.countries.removeAll()
                 print(error.localizedDescription)
             }
         }

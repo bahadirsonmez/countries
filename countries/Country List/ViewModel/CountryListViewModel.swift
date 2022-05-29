@@ -9,7 +9,11 @@ import Foundation
 
 class CountryListViewModel: NSObject {
     
-    private var countries = [Country]()
+    private var countries: [Country] = [] {
+        didSet {
+            reloadCompletion?()
+        }
+    }
     private let service = CountryService()
     private let region: Region
     
@@ -37,7 +41,6 @@ class CountryListViewModel: NSObject {
             switch result {
             case .success(let countries):
                 self?.countries = countries
-                self?.reloadCompletion?()
             case .failure(let error):
                 print(error.localizedDescription)
             }

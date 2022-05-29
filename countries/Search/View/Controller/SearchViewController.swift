@@ -81,7 +81,12 @@ extension SearchViewController: UITableViewDataSource {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.searchText = searchText.count > 2 ? searchText : nil
+        NSObject.cancelPreviousPerformRequests(withTarget: self)
+        perform(#selector(updateWithDebouncer(text:)), with: searchText, afterDelay: 0.3)
+    }
+    
+    @objc func updateWithDebouncer(text: String) {
+        viewModel.searchText = text.count > 1 ? text : nil
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
