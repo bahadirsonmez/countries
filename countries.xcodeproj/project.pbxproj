@@ -46,6 +46,8 @@
 		1CE78DAB284426A600718645 /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DAA284426A600718645 /* CountryDetailViewModel.swift */; };
 		1CE78DAD2845034600718645 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DAC2845034600718645 /* LoadingView.swift */; };
 		1CE78DB02845040E00718645 /* ScreenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DAF2845040E00718645 /* ScreenHelper.swift */; };
+		1CE78DB82845109300718645 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DB62845109300718645 /* MapViewController.swift */; };
+		1CE78DB92845109300718645 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE78DB72845109300718645 /* MapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		1CE78DAA284426A600718645 /* CountryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModel.swift; sourceTree = "<group>"; };
 		1CE78DAC2845034600718645 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		1CE78DAF2845040E00718645 /* ScreenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenHelper.swift; sourceTree = "<group>"; };
+		1CE78DB62845109300718645 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1CE78DB72845109300718645 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,6 +416,8 @@
 			children = (
 				1CE78DA628441C3100718645 /* CountryDetailViewController.swift */,
 				1CE78DA728441C3100718645 /* CountryDetailViewController.xib */,
+				1CE78DB62845109300718645 /* MapViewController.swift */,
+				1CE78DB72845109300718645 /* MapViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -537,6 +543,7 @@
 				1CE78D362842569A00718645 /* LaunchScreen.storyboard in Resources */,
 				1CE78D6828437C2C00718645 /* RegionListViewController.xib in Resources */,
 				1CE78DA928441C3100718645 /* CountryDetailViewController.xib in Resources */,
+				1CE78DB92845109300718645 /* MapViewController.xib in Resources */,
 				1CE78D8E2843A8D600718645 /* CountryItemTableViewCell.xib in Resources */,
 				1CE78D5E28429AE900718645 /* CountryListViewController.xib in Resources */,
 				1CE78D7028437C9600718645 /* BasicItemTableViewCell.xib in Resources */,
@@ -589,6 +596,7 @@
 				1CE78D6F28437C9600718645 /* BasicItemTableViewCell.swift in Sources */,
 				1CE78D9E2843BAE300718645 /* SearchViewModel.swift in Sources */,
 				1CE78D942843B37F00718645 /* Array+extension.swift in Sources */,
+				1CE78DB82845109300718645 /* MapViewController.swift in Sources */,
 				1CE78D2A2842569800718645 /* AppDelegate.swift in Sources */,
 				1CE78D7C2843895300718645 /* BaseService.swift in Sources */,
 				1CE78D84284391EF00718645 /* CountryByRegionRequest.swift in Sources */,
