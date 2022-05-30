@@ -24,7 +24,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         let secondViewController = SearchViewController(viewModel: searchViewModel)
         
         let firstView: UIViewController = UINavigationController(rootViewController: firstViewController)
-        let tabbarItem = UITabBarItem(title: "Countries", image: UIImage(systemName: "list.bullet"), tag: 0)
+        let tabbarItem = UITabBarItem(title: "Regions", image: UIImage(systemName: "list.bullet"), tag: 0)
         firstView.tabBarItem = tabbarItem
         
         let secondView: UIViewController = UINavigationController(rootViewController: secondViewController)
