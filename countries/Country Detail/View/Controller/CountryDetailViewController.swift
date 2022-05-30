@@ -68,9 +68,8 @@ class CountryDetailViewController: BaseViewController {
     }
     
     @IBAction func mapButtonTapped(_ sender: UIButton) {
-        guard let location = viewModel.location else { return }
-        let area = viewModel.area
-        let viewController = MapViewController(location: location, area: area)
+        let viewModel = viewModel.mapItemViewModel
+        let viewController = MapViewController(viewModel: viewModel)
         present(viewController, animated: true, completion: nil)
     }
     

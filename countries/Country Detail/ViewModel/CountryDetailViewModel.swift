@@ -5,7 +5,7 @@
 //  Created by Bahadır Kişisel on 30.05.2022.
 //
 
-import CoreLocation
+import Foundation
 
 class CountryDetailViewModel: NSObject {
     
@@ -38,20 +38,7 @@ class CountryDetailViewModel: NSObject {
     var flagUrl: String {
         country.flags?.png ?? ""
     }
-    
-    var location: CLLocation? {
-        if let latlng = country.latlng, latlng.count == 2 {
-            let lat = latlng[0]
-            let long = latlng[1]
-            return CLLocation(latitude: lat, longitude: long)
-        }
-        return nil
-    }
-    
-    var area: CLLocationDistance {
-        country.area ?? 100000
-    }
-    
+        
     func basicItem(at index: Int) -> BasicItemViewModel? {
         BasicItemViewModel(with: neighbours[index].name?.common ?? "")
     }
@@ -62,6 +49,10 @@ class CountryDetailViewModel: NSObject {
     
     func countryItem(at index: Int) -> CountryDetailViewModel? {
         CountryDetailViewModel(with: neighbours[index])
+    }
+    
+    var mapItemViewModel: MapViewModel {
+        MapViewModel(with: country)
     }
     
     func getNeighbours() {

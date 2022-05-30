@@ -12,14 +12,13 @@ class MapViewController: BaseViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var navigationTitle: UINavigationItem!
     @IBOutlet weak var closeButton: UIBarButtonItem!
-    
-    private let initialLocation: CLLocation
-    private let area: CLLocationDistance
-
-    init(location: CLLocation, area: CLLocationDistance) {
-        self.initialLocation = location
-        self.area = area
+        
+    private let viewModel: MapViewModel
+        
+    init(viewModel: MapViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,11 +29,11 @@ class MapViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        mapView.centerToLocation(initialLocation, regionRadius: area)
+        mapView.centerToLocation(viewModel.location, regionRadius: viewModel.area)
     }
     
     private func configure() {
-        mapView.showsCompass = false
+        navigationTitle.title = viewModel.title
     }
 
     @IBAction func closeButtonTapped(_ sender: UIBarButtonItem) {

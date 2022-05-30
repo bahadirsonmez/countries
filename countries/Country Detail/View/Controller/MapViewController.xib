@@ -14,6 +14,7 @@
                 <outlet property="closeButton" destination="Rd5-LJ-bWM" id="gTt-dj-9XG"/>
                 <outlet property="mapView" destination="kiO-3B-emh" id="zBU-YC-FnS"/>
                 <outlet property="navigationBar" destination="mSj-Fo-TTz" id="Ocl-7G-vu0"/>
+                <outlet property="navigationTitle" destination="Rqw-YZ-5G3" id="mrb-8Z-PgJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,16 +23,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSj-Fo-TTz">
-                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSj-Fo-TTz">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="zCU-PL-jtc"/>
+                        <constraint firstAttribute="height" constant="44" id="zCU-PL-jtc"/>
                     </constraints>
                     <color key="tintColor" systemColor="labelColor"/>
                     <items>
                         <navigationItem title="Title" largeTitleDisplayMode="never" id="Rqw-YZ-5G3">
-                            <barButtonItem key="rightBarButtonItem" image="multiply" catalog="system" style="plain" id="Rd5-LJ-bWM" userLabel="closeButton">
+                            <barButtonItem key="rightBarButtonItem" image="multiply" catalog="system" style="done" id="Rd5-LJ-bWM" userLabel="closeButton">
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <connections>
                                     <action selector="closeButtonTapped:" destination="-1" id="Z2M-O8-RAV"/>
@@ -41,7 +42,7 @@
                     </items>
                 </navigationBar>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kiO-3B-emh">
-                    <rect key="frame" x="0.0" y="104" width="414" height="792"/>
+                    <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                 </mapView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

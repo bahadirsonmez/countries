@@ -49,6 +49,7 @@
 		1CE78DB82845109300718645 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DB62845109300718645 /* MapViewController.swift */; };
 		1CE78DB92845109300718645 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE78DB72845109300718645 /* MapViewController.xib */; };
 		1CE78DBB28454A6200718645 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DBA28454A6200718645 /* BaseViewController.swift */; };
+		1CE78DBD28454DA500718645 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DBC28454DA500718645 /* MapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		1CE78DB62845109300718645 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1CE78DB72845109300718645 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		1CE78DBA28454A6200718645 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1CE78DBC28454DA500718645 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -429,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				1CE78DAA284426A600718645 /* CountryDetailViewModel.swift */,
+				1CE78DBC28454DA500718645 /* MapViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				1CE78DAD2845034600718645 /* LoadingView.swift in Sources */,
 				1CE78D7E2843896A00718645 /* BaseURLRequest.swift in Sources */,
 				1CE78D982843B73A00718645 /* SearchViewController.swift in Sources */,
+				1CE78DBD28454DA500718645 /* MapViewModel.swift in Sources */,
 				1CE78D5A2842963A00718645 /* TabBarController.swift in Sources */,
 				1CE78D612842A9F500718645 /* CountryListViewModel.swift in Sources */,
 				1CE78D902843A9AF00718645 /* UIImageView+extension.swift in Sources */,
