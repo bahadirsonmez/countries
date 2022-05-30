@@ -48,6 +48,7 @@
 		1CE78DB02845040E00718645 /* ScreenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DAF2845040E00718645 /* ScreenHelper.swift */; };
 		1CE78DB82845109300718645 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DB62845109300718645 /* MapViewController.swift */; };
 		1CE78DB92845109300718645 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE78DB72845109300718645 /* MapViewController.xib */; };
+		1CE78DBB28454A6200718645 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DBA28454A6200718645 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		1CE78DAF2845040E00718645 /* ScreenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenHelper.swift; sourceTree = "<group>"; };
 		1CE78DB62845109300718645 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1CE78DB72845109300718645 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		1CE78DBA28454A6200718645 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -399,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				1CE78DAC2845034600718645 /* LoadingView.swift */,
+				1CE78DBA28454A6200718645 /* BaseViewController.swift */,
 			);
 			path = "UI Elements";
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				1CE78D8028438AAE00718645 /* Encodable+extension.swift in Sources */,
 				1CE78DAB284426A600718645 /* CountryDetailViewModel.swift in Sources */,
 				1CE78DA32843BD9400718645 /* SearchRequest.swift in Sources */,
+				1CE78DBB28454A6200718645 /* BaseViewController.swift in Sources */,
 				1CE78DA12843BD7700718645 /* SearchService.swift in Sources */,
 				1CE78D8228438B6600718645 /* CountryService.swift in Sources */,
 				1CE78D7228437D7000718645 /* RegionListViewModel.swift in Sources */,

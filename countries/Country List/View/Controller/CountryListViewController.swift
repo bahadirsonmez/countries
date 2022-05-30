@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CountryListViewController: UIViewController {
+class CountryListViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
     

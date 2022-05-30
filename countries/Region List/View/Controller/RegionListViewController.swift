@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegionListViewController: UIViewController {
+class RegionListViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
         

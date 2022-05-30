@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: BaseViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var closeButton: UIButton!
