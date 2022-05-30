@@ -377,9 +377,8 @@
 		1CE78DA528441ABA00718645 /* Country Detail */ = {
 			isa = PBXGroup;
 			children = (
-				1CE78DA628441C3100718645 /* CountryDetailViewController.swift */,
-				1CE78DA728441C3100718645 /* CountryDetailViewController.xib */,
-				1CE78DAA284426A600718645 /* CountryDetailViewModel.swift */,
+				1CE78DB228450B2B00718645 /* View */,
+				1CE78DB428450B4600718645 /* ViewModel */,
 			);
 			path = "Country Detail";
 			sourceTree = "<group>";
@@ -398,6 +397,31 @@
 				1CE78DAC2845034600718645 /* LoadingView.swift */,
 			);
 			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		1CE78DB228450B2B00718645 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CE78DB328450B3400718645 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1CE78DB328450B3400718645 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1CE78DA628441C3100718645 /* CountryDetailViewController.swift */,
+				1CE78DA728441C3100718645 /* CountryDetailViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1CE78DB428450B4600718645 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1CE78DAA284426A600718645 /* CountryDetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
