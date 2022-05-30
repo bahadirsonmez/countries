@@ -29,6 +29,7 @@ class CountryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        viewModel.getNeighbours()
     }
     
     private func setup() {
@@ -45,6 +46,10 @@ class CountryDetailViewController: UIViewController {
     }
     
     private func configure() {
+        closeButton.backgroundColor = .label.withAlphaComponent(0.5)
+        closeButton.layer.cornerRadius = 4
+        mapButton.backgroundColor = .label.withAlphaComponent(0.5)
+        mapButton.layer.cornerRadius = 4
         flagImageView.imageFromServerURL(viewModel.flagUrl, placeHolder: UIImage(systemName: "flag.fill"))
         currenciesLabel.text = viewModel.currencies
         languagesLabel.text = viewModel.languages
@@ -56,6 +61,9 @@ class CountryDetailViewController: UIViewController {
             let viewModel = CountryDetailViewModel(with: country)
             let viewController = CountryDetailViewController(viewModel: viewModel)
             self?.present(viewController, animated: true, completion: nil)
+        }
+        viewModel.reloadCompletion = { [weak self] in
+            self?.neighboursTableView.reloadData()
         }
     }
 
@@ -77,7 +85,7 @@ extension CountryDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(cell: BasicItemTableViewCell.self, for: indexPath)
-        cell.viewModel = viewModel.countryItem(at: indexPath.row)
+        cell.viewModel = viewModel.basicItem(at: indexPath.row)
         return cell
     }
 }

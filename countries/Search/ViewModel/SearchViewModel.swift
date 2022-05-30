@@ -37,6 +37,10 @@ class SearchViewModel: NSObject {
         CountryItemViewModel(with: countries[index])
     }
     
+    func country(at index: Int) -> Country {
+        countries[index]
+    }
+    
     func searchCountryByName() {
         guard let query = searchText else {
             countries.removeAll()
