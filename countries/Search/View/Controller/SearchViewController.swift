@@ -55,7 +55,9 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let viewModel = CountryDetailViewModel(with: viewModel.country(at: indexPath.row))
+        let viewController = CountryDetailViewController(viewModel: viewModel)
+        present(viewController, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

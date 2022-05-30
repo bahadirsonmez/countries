@@ -44,6 +44,8 @@
 		1CE78DA828441C3100718645 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DA628441C3100718645 /* CountryDetailViewController.swift */; };
 		1CE78DA928441C3100718645 /* CountryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE78DA728441C3100718645 /* CountryDetailViewController.xib */; };
 		1CE78DAB284426A600718645 /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DAA284426A600718645 /* CountryDetailViewModel.swift */; };
+		1CE78DAD2845034600718645 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DAC2845034600718645 /* LoadingView.swift */; };
+		1CE78DB02845040E00718645 /* ScreenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78DAF2845040E00718645 /* ScreenHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		1CE78DA628441C3100718645 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
 		1CE78DA728441C3100718645 /* CountryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryDetailViewController.xib; sourceTree = "<group>"; };
 		1CE78DAA284426A600718645 /* CountryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModel.swift; sourceTree = "<group>"; };
+		1CE78DAC2845034600718645 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1CE78DAF2845040E00718645 /* ScreenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +164,10 @@
 				1CE78D322842569A00718645 /* Assets.xcassets */,
 				1CE78D342842569A00718645 /* LaunchScreen.storyboard */,
 				1CE78D372842569A00718645 /* Info.plist */,
+				1CE78DB1284509E600718645 /* UI Elements */,
 				1CE78D7A2843893500718645 /* Network */,
 				1CE78D74284380EE00718645 /* Extensions */,
+				1CE78DAE284503FC00718645 /* Helpers */,
 				1CE78DA42844184A00718645 /* TabBar */,
 				1CE78D952843B71D00718645 /* Search */,
 				1CE78D6428437C0D00718645 /* Region List */,
@@ -378,6 +384,22 @@
 			path = "Country Detail";
 			sourceTree = "<group>";
 		};
+		1CE78DAE284503FC00718645 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1CE78DAF2845040E00718645 /* ScreenHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1CE78DB1284509E600718645 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				1CE78DAC2845034600718645 /* LoadingView.swift */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -522,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CE78D922843AC5300718645 /* CountryItemViewModel.swift in Sources */,
+				1CE78DB02845040E00718645 /* ScreenHelper.swift in Sources */,
 				1CE78D8028438AAE00718645 /* Encodable+extension.swift in Sources */,
 				1CE78DAB284426A600718645 /* CountryDetailViewModel.swift in Sources */,
 				1CE78DA32843BD9400718645 /* SearchRequest.swift in Sources */,
@@ -533,6 +556,7 @@
 				1CE78D632842C48900718645 /* CountryModel.swift in Sources */,
 				1CE78DA828441C3100718645 /* CountryDetailViewController.swift in Sources */,
 				1CE78D762843810200718645 /* UITableViewCell+extension.swift in Sources */,
+				1CE78DAD2845034600718645 /* LoadingView.swift in Sources */,
 				1CE78D7E2843896A00718645 /* BaseURLRequest.swift in Sources */,
 				1CE78D982843B73A00718645 /* SearchViewController.swift in Sources */,
 				1CE78D5A2842963A00718645 /* TabBarController.swift in Sources */,
