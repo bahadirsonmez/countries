@@ -10,15 +10,11 @@ import Foundation
 
 class BaseService {
     func performRequest<T:Decodable>(request: BaseURLRequest, completion:@escaping (Result<T, AFError>)->Void) {
-//        if request.blocks {
-//            HudHelper.showBlockingHud()
-//        }
+        LoadingView().startLoading()
         AF.request(request)
             .responseDecodable (decoder: JSONDecoder()){ (response: DataResponse<T, AFError>) in
+                LoadingView().stopLoading()
                 completion(response.result)
-//                if request.blocks {
-//                    HudHelper.hideBlockingHud()
-//                }
             }
     }
 }

@@ -5,7 +5,8 @@
 //  Created by Bahadır Kişisel on 29.05.2022.
 //
 
-// Reference: https://stackoverflow.com/a/37019507
+// Source: https://stackoverflow.com/a/37019507
+
 import UIKit
 
 extension UIImageView {
