@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CountryDetailViewController: UIViewController {
+class CountryDetailViewController: BaseViewController {
 
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var currenciesLabel: UILabel!
@@ -54,7 +54,6 @@ class CountryDetailViewController: UIViewController {
         flagImageView.imageFromServerURL(viewModel.flagUrl, placeHolder: UIImage(systemName: "flag.fill"))
         currenciesLabel.text = viewModel.currencies
         languagesLabel.text = viewModel.languages
-        neighboursTableView.reloadData()
     }
     
     private func bindViewModel() {
@@ -69,7 +68,10 @@ class CountryDetailViewController: UIViewController {
     }
     
     @IBAction func mapButtonTapped(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        guard let location = viewModel.location else { return }
+        let area = viewModel.area
+        let viewController = MapViewController(location: location, area: area)
+        present(viewController, animated: true, completion: nil)
     }
     
     @IBAction func closeButtonTapped(_ sender: UIButton) {

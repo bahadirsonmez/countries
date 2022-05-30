@@ -16,7 +16,7 @@ struct Country: Codable {
     let languages: [String: String]?
     let latlng: [Double]?
     let borders: [String]?
-    let flag: String?
+    let area: Double?
     let continents: [Continent]?
     let flags: Flags?
 }
