@@ -14,6 +14,7 @@ class CountryDetailViewController: UIViewController {
     @IBOutlet weak var languagesLabel: UILabel!
     @IBOutlet weak var neighboursTableView: UITableView!
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var mapButton: UIButton!
     
     private let viewModel: CountryDetailViewModel
         
@@ -66,7 +67,11 @@ class CountryDetailViewController: UIViewController {
             self?.neighboursTableView.reloadData()
         }
     }
-
+    
+    @IBAction func mapButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func closeButtonTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
