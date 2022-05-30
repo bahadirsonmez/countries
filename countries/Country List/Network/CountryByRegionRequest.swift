@@ -11,16 +11,15 @@ final class CountryByRegionRequest: BaseURLRequest {
     
     init(with region: String) {
         super.init()
-        self.method = .get
         self.path = "v3.1/region/\(region)"
     }
 }
 
-final class CountryByCodeRequest: BaseURLRequest {
+final class CountryByCodesRequest: BaseURLRequest {
     
-    init(with code: String) {
+    init(with codes: [String]) {
         super.init()
-        self.method = .get
-        self.path = "v3.1/alpha/\(code)"
+        let codesString = codes.joined(separator: ",")
+        self.path = "v3.1/alpha?codes=\(codesString)"
     }
 }
