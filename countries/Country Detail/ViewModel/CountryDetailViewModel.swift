@@ -71,7 +71,7 @@ class CountryDetailViewModel: NSObject {
             case .success(let countries):
                 self?.neighbours = countries
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error.localizedDescription) // Should not present alert
             }
         }
     }
@@ -85,7 +85,7 @@ class CountryDetailViewModel: NSObject {
                 guard let country = countries.first else { return }
                 self?.countryRetrieved?(country)
             case .failure(let error):
-                print(error.localizedDescription)
+                AlertHelper.showAlertMessage(messageStr: error.localizedDescription)
             }
         }
     }

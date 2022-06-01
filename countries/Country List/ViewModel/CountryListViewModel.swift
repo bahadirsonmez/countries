@@ -46,7 +46,7 @@ class CountryListViewModel: NSObject {
             case .success(let countries):
                 self?.countries = countries
             case .failure(let error):
-                print(error.localizedDescription)
+                AlertHelper.showAlertMessage(messageStr: error.localizedDescription)
             }
         }
     }

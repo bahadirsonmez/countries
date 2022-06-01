@@ -53,7 +53,7 @@ class SearchViewModel: NSObject {
                 self?.countries = countries
             case .failure(let error):
                 self?.countries.removeAll()
-                print(error.localizedDescription)
+                print(error.localizedDescription) // Should not present an alert
             }
         }
     }

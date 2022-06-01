@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CDC3B81284758F5000BA544 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDC3B80284758F5000BA544 /* AlertHelper.swift */; };
 		1CE78D2A2842569800718645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE78D292842569800718645 /* AppDelegate.swift */; };
 		1CE78D312842569800718645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE78D2F2842569800718645 /* Main.storyboard */; };
 		1CE78D332842569A00718645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CE78D322842569A00718645 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CDC3B80284758F5000BA544 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		1CE78D262842569800718645 /* countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE78D292842569800718645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CE78D302842569800718645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				1CE78DAF2845040E00718645 /* ScreenHelper.swift */,
+				1CDC3B80284758F5000BA544 /* AlertHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				1CE78D7E2843896A00718645 /* BaseURLRequest.swift in Sources */,
 				1CE78D982843B73A00718645 /* SearchViewController.swift in Sources */,
 				1CE78DBD28454DA500718645 /* MapViewModel.swift in Sources */,
+				1CDC3B81284758F5000BA544 /* AlertHelper.swift in Sources */,
 				1CE78D5A2842963A00718645 /* TabBarController.swift in Sources */,
 				1CE78D612842A9F500718645 /* CountryListViewModel.swift in Sources */,
 				1CE78D902843A9AF00718645 /* UIImageView+extension.swift in Sources */,
