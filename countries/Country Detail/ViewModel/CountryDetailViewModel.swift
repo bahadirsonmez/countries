@@ -25,6 +25,14 @@ class CountryDetailViewModel: NSObject {
         self.country = country
     }
     
+    var title: String? {
+        country.name?.common
+    }
+    
+    var flagUrl: String {
+        country.flags?.png ?? ""
+    }
+    
     var currencies: String? {
         let currencies = country.currencies?.values.compactMap(\.name).joined(separator: ", ")
         return currencies
@@ -35,8 +43,8 @@ class CountryDetailViewModel: NSObject {
         return languages
     }
     
-    var flagUrl: String {
-        country.flags?.png ?? ""
+    var neighboursTitle: String? {
+        "Neighbours (\(neighbours.count))"
     }
         
     func basicItem(at index: Int) -> BasicItemViewModel? {
@@ -57,7 +65,7 @@ class CountryDetailViewModel: NSObject {
     
     func getNeighbours() {
         guard let neighbours = country.borders else { return }
-        let request = CountryByCodesRequest(with: neighbours)
+        let request = CountriesByCodesRequest(with: neighbours)
         service.getCountriesByCode(request: request) { [weak self] result in
             switch result {
             case .success(let countries):

@@ -10,8 +10,10 @@ import UIKit
 class CountryDetailViewController: BaseViewController {
 
     @IBOutlet weak var flagImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var currenciesLabel: UILabel!
     @IBOutlet weak var languagesLabel: UILabel!
+    @IBOutlet weak var neighboursTitleLabel: UILabel!
     @IBOutlet weak var neighboursTableView: UITableView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var mapButton: UIButton!
@@ -51,6 +53,7 @@ class CountryDetailViewController: BaseViewController {
         closeButton.layer.cornerRadius = 4
         mapButton.backgroundColor = .label.withAlphaComponent(0.5)
         mapButton.layer.cornerRadius = 4
+        titleLabel.text = viewModel.title
         flagImageView.imageFromServerURL(viewModel.flagUrl, placeHolder: UIImage(systemName: "flag.fill"))
         currenciesLabel.text = viewModel.currencies
         languagesLabel.text = viewModel.languages
@@ -63,6 +66,7 @@ class CountryDetailViewController: BaseViewController {
             self?.present(viewController, animated: true, completion: nil)
         }
         viewModel.reloadCompletion = { [weak self] in
+            self?.neighboursTitleLabel.text = self?.viewModel.neighboursTitle
             self?.neighboursTableView.reloadData()
         }
     }
