@@ -15,7 +15,15 @@ final class CountryByRegionRequest: BaseURLRequest {
     }
 }
 
-final class CountryByCodesRequest: BaseURLRequest {
+final class CountryByCodeRequest: BaseURLRequest {
+    
+    init(with codeString: String) {
+        super.init()
+        self.path = "v3.1/alpha/\(codeString)"
+    }
+}
+
+final class CountriesByCodesRequest: BaseURLRequest {
     
     init(with codes: [String]) {
         super.init()

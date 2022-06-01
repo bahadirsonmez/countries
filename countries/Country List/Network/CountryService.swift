@@ -13,7 +13,11 @@ class CountryService: BaseService {
         self.performRequest(request: request, completion: completion)
     }
     
-    func getCountriesByCode(request: CountryByCodesRequest, completion:@escaping (Result<[Country], AFError>)->Void) {
+    func getCountryByCode(request: CountryByCodeRequest, completion:@escaping (Result<[Country], AFError>)->Void) {
+        self.performRequest(request: request, completion: completion)
+    }
+    
+    func getCountriesByCode(request: CountriesByCodesRequest, completion:@escaping (Result<[Country], AFError>)->Void) {
         self.performRequest(request: request, completion: completion)
     }
 

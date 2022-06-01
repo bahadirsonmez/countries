@@ -10,6 +10,7 @@ import Foundation
 // MARK: - Country
 struct Country: Codable {
     let name: Name?
+    let cca3: String?
     let currencies: [String: Aed]?
     let region: Region?
     let subregion: String?

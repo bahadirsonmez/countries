@@ -69,9 +69,9 @@ class CountryDetailViewModel: NSObject {
     }
     
     func getCountry(at index: Int) {
-        guard let name = neighbours[index].name?.common else { return }
-        let request = SearchRequest(with: name, isFullName: true)
-        searchService.searchCountryByName(request: request) { [weak self] result in
+        guard let code = neighbours[index].cca3 else { return }
+        let request = CountryByCodeRequest(with: code)
+        service.getCountryByCode(request: request) { [weak self] result in
             switch result {
             case .success(let countries):
                 guard let country = countries.first else { return }
