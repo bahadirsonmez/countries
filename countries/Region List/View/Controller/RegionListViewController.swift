@@ -35,7 +35,6 @@ class RegionListViewController: BaseViewController {
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = .singleLine
         tableView.register(cell: BasicItemTableViewCell.self)
         tableView.reloadData()
     }

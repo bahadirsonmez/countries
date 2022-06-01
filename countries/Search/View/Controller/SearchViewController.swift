@@ -38,7 +38,6 @@ class SearchViewController: BaseViewController {
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = .singleLine
         tableView.register(cell: CountryItemTableViewCell.self)
     }
     
