@@ -8,6 +8,8 @@
 import UIKit
 
 class CountryDetailViewController: BaseViewController {
+    
+    // MARK: - IBOutlets
 
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -17,6 +19,8 @@ class CountryDetailViewController: BaseViewController {
     @IBOutlet weak var neighboursTableView: UITableView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var mapButton: UIButton!
+    
+    // MARK: - Initialization
     
     private let viewModel: CountryDetailViewModel
         
@@ -29,11 +33,15 @@ class CountryDetailViewController: BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         viewModel.getNeighbours()
     }
+    
+    // MARK: - Configuration
     
     private func setup() {
         configureTableView()
@@ -71,6 +79,8 @@ class CountryDetailViewController: BaseViewController {
         }
     }
     
+    // MARK: - IBActions
+    
     @IBAction func mapButtonTapped(_ sender: UIButton) {
         let viewModel = viewModel.mapItemViewModel
         let viewController = MapViewController(viewModel: viewModel)
@@ -80,13 +90,18 @@ class CountryDetailViewController: BaseViewController {
     @IBAction func closeButtonTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
 }
+
+// MARK: - UITableViewDelegate
 
 extension CountryDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.getCountry(at: indexPath.row)
     }
 }
+
+// MARK: - UITableViewDataSource
 
 extension CountryDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -8,8 +8,12 @@
 import UIKit
 
 class RegionListViewController: BaseViewController {
+    
+    // MARK: - IBOutlets
 
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Initialization
         
     private let viewModel: RegionListViewModel
         
@@ -21,12 +25,16 @@ class RegionListViewController: BaseViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Regions"
         setup()
     }
+    
+    // MARK: - Configure
     
     private func setup() {
         configureTableView()
@@ -41,6 +49,8 @@ class RegionListViewController: BaseViewController {
 
 }
 
+// MARK: - UITableViewDelegate
+
 extension RegionListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let region = viewModel.regionItemViewModel(at: indexPath.row).region
@@ -49,6 +59,8 @@ extension RegionListViewController: UITableViewDelegate {
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
+
+// MARK: - UITableViewDataSource
 
 extension RegionListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

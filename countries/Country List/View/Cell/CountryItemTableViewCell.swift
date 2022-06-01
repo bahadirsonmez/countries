@@ -9,9 +9,13 @@ import UIKit
 
 class CountryItemTableViewCell: UITableViewCell {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nativeTitleLabel: UILabel!
+    
+    // MARK: - Variables
     
     var viewModel: CountryItemViewModel? {
         didSet {
@@ -19,10 +23,16 @@ class CountryItemTableViewCell: UITableViewCell {
         }
     }
     
+    static let cellHeight: CGFloat = 104.0
+    
+    // MARK: - Lifecycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
     }
+    
+    // MARK: - Configuration
     
     private func configureCell() {
         guard let viewModel = viewModel else {

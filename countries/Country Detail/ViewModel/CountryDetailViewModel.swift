@@ -9,20 +9,27 @@ import Foundation
 
 class CountryDetailViewModel: NSObject {
     
+    // MARK: - Initialization
+    
     private let country: Country
     private let service = CountryService()
     private let searchService = SearchService()
-    private var neighbours: [Country] = [] {
-        didSet {
-            self.reloadCompletion?()
-        }
+    
+    init(with country: Country) {
+        self.country = country
     }
+    
+    // MARK: - Closures
     
     var reloadCompletion: (() -> Void)?
     var countryRetrieved: ((Country) -> Void)?
     
-    init(with country: Country) {
-        self.country = country
+    // MARK: - Variables
+    
+    private var neighbours: [Country] = [] {
+        didSet {
+            self.reloadCompletion?()
+        }
     }
     
     var title: String? {
@@ -46,13 +53,15 @@ class CountryDetailViewModel: NSObject {
     var neighboursTitle: String? {
         "Neighbours (\(neighbours.count))"
     }
-        
-    func basicItem(at index: Int) -> BasicItemViewModel? {
-        BasicItemViewModel(with: neighbours[index].name?.common ?? "")
-    }
+    
+    // MARK: - Utilities
     
     var numberOfItems: Int {
         neighbours.count
+    }
+        
+    func basicItem(at index: Int) -> BasicItemViewModel? {
+        BasicItemViewModel(with: neighbours[index].name?.common ?? "")
     }
     
     func countryItem(at index: Int) -> CountryDetailViewModel? {
@@ -62,6 +71,8 @@ class CountryDetailViewModel: NSObject {
     var mapItemViewModel: MapViewModel {
         MapViewModel(with: country)
     }
+    
+    // MARK: - Requests
     
     func getNeighbours() {
         guard let neighbours = country.borders else { return }

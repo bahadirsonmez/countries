@@ -13,7 +13,6 @@ class BaseURLRequest: URLRequestConvertible {
     private let baseURL: String = "https://restcountries.com/"
     var path: String = ""
     var method: HTTPMethod = .get
-    var parameters: Codable?
         
     func asURLRequest() throws -> URLRequest {
         let endpoint = baseURL + path
@@ -24,14 +23,6 @@ class BaseURLRequest: URLRequestConvertible {
         
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
-
-        if let parameters = parameters {
-            do {
-                urlRequest.httpBody = try parameters.jsonData()
-            } catch {
-                throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
-            }
-        }
 
         return urlRequest
     }

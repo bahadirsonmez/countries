@@ -10,11 +10,15 @@ import MapKit
 
 class MapViewController: BaseViewController {
 
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var navigationTitle: UINavigationItem!
     @IBOutlet weak var closeButton: UIBarButtonItem!
-        
+    
+    // MARK: - Initializations
+    
     private let viewModel: MapViewModel
         
     init(viewModel: MapViewModel) {
@@ -26,32 +30,24 @@ class MapViewController: BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
         mapView.centerToLocation(viewModel.location, regionRadius: viewModel.area)
     }
     
+    // MARK: - Configuration
+    
     private func configure() {
         navigationTitle.title = viewModel.title
     }
+    
+    // MARK: - IBActions
 
     @IBAction func closeButtonTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
     
 }
-
-private extension MKMapView {
-  func centerToLocation(
-    _ location: CLLocation,
-    regionRadius: CLLocationDistance = 100000
-  ) {
-    let coordinateRegion = MKCoordinateRegion(
-      center: location.coordinate,
-      latitudinalMeters: regionRadius,
-      longitudinalMeters: regionRadius)
-    setRegion(coordinateRegion, animated: true)
-  }
-}
-

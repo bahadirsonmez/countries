@@ -8,48 +8,41 @@
 import Foundation
 
 // MARK: - Country
+
 struct Country: Codable {
     let name: Name?
     let cca3: String?
     let currencies: [String: Aed]?
     let region: Region?
-    let subregion: String?
     let languages: [String: String]?
     let latlng: [Double]?
     let borders: [String]?
     let area: Double?
-    let continents: [Continent]?
     let flags: Flags?
 }
 
 // MARK: - Flags
+
 struct Flags: Codable {
     let png: String?
     let svg: String?
 }
 
-enum Continent: String, Codable {
-    case africa = "Africa"
-    case antarctica = "Antarctica"
-    case asia = "Asia"
-    case europe = "Europe"
-    case northAmerica = "North America"
-    case oceania = "Oceania"
-    case southAmerica = "South America"
-}
-
 // MARK: - Aed
+
 struct Aed: Codable {
     let name, symbol: String?
 }
 
 // MARK: - Name
+
 struct Name: Codable {
     let common, official: String?
     let nativeName: [String: Translation]?
 }
 
 // MARK: - Translation
+
 struct Translation: Codable {
     let official, common: String?
 }

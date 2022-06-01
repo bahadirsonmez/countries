@@ -8,8 +8,12 @@
 import UIKit
 
 class CountryListViewController: BaseViewController {
+    
+    // MARK: - IBOutlets
 
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Initialization
     
     private let viewModel: CountryListViewModel
         
@@ -21,12 +25,16 @@ class CountryListViewController: BaseViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         viewModel.getCountries()
     }
+    
+    // MARK: - Configuration
     
     private func setup() {
         configureTableView()
@@ -49,6 +57,8 @@ class CountryListViewController: BaseViewController {
     
 }
 
+// MARK: - UITableViewDelegate
+
 extension CountryListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewModel = CountryDetailViewModel(with: viewModel.country(at: indexPath.row))
@@ -57,13 +67,15 @@ extension CountryListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        104.0
+        CountryItemTableViewCell.cellHeight
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        104.0
+        CountryItemTableViewCell.cellHeight
     }
 }
+
+// MARK: - UITableViewDataSource
 
 extension CountryListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

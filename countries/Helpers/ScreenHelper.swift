@@ -39,4 +39,5 @@ class ScreenHelper: NSObject {
         let rootController = window??.rootViewController
         return rootController
     }
+    
 }

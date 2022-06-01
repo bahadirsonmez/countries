@@ -13,6 +13,7 @@ final class CountryByRegionRequest: BaseURLRequest {
         super.init()
         self.path = "v3.1/region/\(region)"
     }
+    
 }
 
 final class CountryByCodeRequest: BaseURLRequest {
@@ -21,6 +22,7 @@ final class CountryByCodeRequest: BaseURLRequest {
         super.init()
         self.path = "v3.1/alpha/\(codeString)"
     }
+    
 }
 
 final class CountriesByCodesRequest: BaseURLRequest {
@@ -30,4 +32,5 @@ final class CountriesByCodesRequest: BaseURLRequest {
         let codesString = codes.joined(separator: ",")
         self.path = "v3.1/alpha?codes=\(codesString)"
     }
+    
 }

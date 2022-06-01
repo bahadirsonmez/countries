@@ -9,25 +9,33 @@ import Foundation
 
 class SearchViewModel: NSObject {
     
+    // MARK: - Initialization
+    
+    private let service = SearchService()
+    
+    // MARK: - Closures
+    
+    var reloadCompletion: (() -> Void)?
+
+    // MARK: - Variables
+    
     private var countries = [Country]() {
         didSet {
             self.reloadCompletion?()
         }
     }
     
-    private let service = SearchService()
-    
     var searchText: String? = nil {
         didSet {
             searchCountryByName()
         }
     }
-    
-    var reloadCompletion: (() -> Void)?
         
     var title: String? {
         "Search"
     }
+    
+    // MARK: - Utilities
         
     var numberOfItems: Int {
         countries.count
@@ -40,6 +48,8 @@ class SearchViewModel: NSObject {
     func country(at index: Int) -> Country {
         countries[index]
     }
+    
+    // MARK: - Requests
     
     func searchCountryByName() {
         guard let query = searchText else {

@@ -9,6 +9,7 @@ import Alamofire
 import Foundation
 
 class BaseService {
+    
     func performRequest<T:Decodable>(request: BaseURLRequest, completion:@escaping (Result<T, AFError>)->Void) {
         LoadingView().startLoading()
         AF.request(request)
@@ -17,4 +18,5 @@ class BaseService {
                 completion(response.result)
             }
     }
+    
 }

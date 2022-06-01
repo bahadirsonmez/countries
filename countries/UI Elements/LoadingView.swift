@@ -10,6 +10,7 @@
 import UIKit
 
 class LoadingView: NSObject {
+    
     static let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     static let activityIndicatorTag = 12345
     

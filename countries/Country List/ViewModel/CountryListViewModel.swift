@@ -9,28 +9,37 @@ import Foundation
 
 class CountryListViewModel: NSObject {
     
+    // MARK: - Initialization
+    
+    private let service = CountryService()
+    private let region: String
+        
+    init(with region: String) {
+        self.region = region
+    }
+    
+    // MARK: - Closures
+    
+    var reloadCompletion: (() -> Void)?
+    
+    // MARK: - Variables
+    
     private var countries: [Country] = [] {
         didSet {
             reloadCompletion?()
         }
     }
-    private let service = CountryService()
-    private let region: String
-    
-    var reloadCompletion: (() -> Void)?
-    
-    init(with region: String) {
-        self.region = region
-    }
     
     var title: String? {
         region
     }
-        
+    
+    // MARK: - Utilities
+    
     var numberOfItems: Int {
         countries.count
     }
-    
+        
     func countryItem(at index: Int) -> CountryItemViewModel {
         CountryItemViewModel(with: countries[index])
     }
@@ -38,6 +47,8 @@ class CountryListViewModel: NSObject {
     func country(at index: Int) -> Country {
         countries[index]
     }
+    
+    // MARK: - Requests
     
     func getCountries() {
         let request = CountryByRegionRequest(with: region)

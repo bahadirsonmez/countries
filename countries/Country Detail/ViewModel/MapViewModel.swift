@@ -9,11 +9,15 @@ import CoreLocation
 
 class MapViewModel: NSObject {
     
+    // MARK: - Initialization
+    
     private let country: Country
 
     init(with country: Country) {
         self.country = country
     }
+    
+    // MARK: - Variables
     
     var title: String? {
         country.name?.common

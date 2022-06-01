@@ -9,8 +9,12 @@ import UIKit
 
 class SearchViewController: BaseViewController {
 
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    
+    // MARK: - Initialization
     
     private let viewModel: SearchViewModel
         
@@ -23,10 +27,14 @@ class SearchViewController: BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
+    
+    // MARK: - Configuration
     
     private func setup() {
         configureTableView()
@@ -50,7 +58,10 @@ class SearchViewController: BaseViewController {
             self?.tableView.reloadData()
         }
     }
+    
 }
+
+// MARK: - UITableViewDelegate
 
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -60,13 +71,15 @@ extension SearchViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        104.0
+        CountryItemTableViewCell.cellHeight
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        104.0
+        CountryItemTableViewCell.cellHeight
     }
 }
+
+// MARK: - UITableViewDataSource
 
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,6 +92,8 @@ extension SearchViewController: UITableViewDataSource {
         return cell
     }
 }
+
+// MARK: - UISearchBarDelegate
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
