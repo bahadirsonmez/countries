@@ -9,9 +9,9 @@ import Foundation
 
 final class SearchRequest: BaseURLRequest {
     
-    init(with searchText: String, isFullName: Bool = false) {
+    init(with searchText: String) {
         super.init()
-        self.path = "v3.1/name/" + (isFullName ? "\(searchText)?fullText=true" : "\(searchText)")
+        self.path = "v3.1/name/\(searchText)"
     }
     
 }
